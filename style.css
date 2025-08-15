@@ -1,0 +1,26 @@
+body {
+  background-color: #f0f0f0; /* Light gray background */
+    font-family: 'Poppins', sans-serif;
+}
+  #bgVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+.transparent-bg {
+  background-color: rgba(255, 255, 255, 0.20.2); 
+  color: #222;   padding: 20px;
+  width: 900px;
+  height: auto;
+  border-radius: 10px;
+  margin: auto;
+  margin-top: 10%; 
+    font-family: 'Poppins', sans-serif;
+}
+.color_btn {
+  background-color: #0d6efd; 
+}
