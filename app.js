@@ -1,6 +1,8 @@
 const temperature = document.getElementById('temperature');
 const color_change = document.querySelector('.color_change');
 const color_btn = document.querySelector('.color_btn');
+const bgimg = document.getElementById("bgimg");
+
 
 async function getWeather() {
   try {
@@ -31,19 +33,19 @@ async function getWeather() {
     let conditionMain = weatherData.weather[0].main.toLowerCase();
 
     if (conditionMain === "clouds") {
-      bgVideo.src = "./aset/cloud.mp4";
+      bgimg.src = "./aset/clouds.jpg";
       color_change.style.color = "white";
       color_btn.style.color = "white";
       color_btn.style.backgroundColor = "black";
     } else if (conditionMain === "rain") {
-      bgVideo.src = "./aset/rain.mp4";
+      bgimg.src = "./aset/rain.jpg";
     } else if (conditionMain === "clear") {
-      bgVideo.src = "./aset/celar.mp4";
+      bgimg.src = "./aset/clear.jpg";
       color_change.style.color = "black";
     } else if (conditionMain === "snow") {
-      bgVideo.src = "./aset/snow.mp4";
+      bgimg.src = "./aset/snow.jpg";
     } else {
-      bgVideo.src = "./aset/celar.mp4";
+      bgimg.src = "./aset/clear.jpg";
     }
 
   } catch (error) {
@@ -57,8 +59,8 @@ async function getWeather() {
     });
   }
 }
+getWeather()
 
-getWeather();
 async function serchcity() {
   const cityInput = document.querySelector('#cityInput');
   const city = cityInput.value.trim();
@@ -106,24 +108,21 @@ async function serchcity() {
     let conditionMain = citydata.weather[0].main.toLowerCase();
 
     if (conditionMain === "clouds") {
-      bgVideo.src = "./aset/cloud.mp4";
+      bgimg.src = "./aset/clouds.jpg";
       color_change.style.color = "white";
       color_btn.style.color = "white";
       color_btn.style.backgroundColor = "black";
-    } 
-    else if (conditionMain === "rain") {
-      bgVideo.src = "./aset/rain.mp4";
-    } 
-    else if (conditionMain === "clear") {
-      bgVideo.src = "./aset/celar.mp4";
+    } else if (conditionMain === "rain") {
+      bgimg.src = "./aset/rain.jpg";
+    } else if (conditionMain === "clear") {
+      bgimg.src = "./aset/clear.jpg";
       color_change.style.color = "black";
-    } 
-    else if (conditionMain === "snow") {
-      bgVideo.src = "./aset/snow.mp4";
-    } 
-    else {
-      bgVideo.src = "./aset/celar.mp4";
+    } else if (conditionMain === "snow") {
+      bgimg.src = "./aset/snow.jpg";
+    } else {
+      bgimg.src = "./aset/clear.jpg";
     }
+
 
   } catch (error) {
    

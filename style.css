@@ -1,26 +1,63 @@
 body {
-  background-color: #f0f0f0; /* Light gray background */
-    font-family: 'Poppins', sans-serif;
+  background-color: #f0f0f0;
+  font-family: 'Poppins', sans-serif;
 }
-  #bgVideo {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
-    object-fit: cover;
-    z-index: -1;
-  }
+
+#bgimg {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+}
+
 .transparent-bg {
-  background-color: rgba(255, 255, 255, 0.20.2); 
-  color: #222;   padding: 20px;
-  width: 900px;
-  height: auto;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #222;
+  padding: 20px;
+  width: 90%;          
+  max-width: 900px;    
   border-radius: 10px;
   margin: auto;
-  margin-top: 10%; 
-    font-family: 'Poppins', sans-serif;
+  margin-top: 10%;
+  font-family: 'Poppins', sans-serif;
 }
+
 .color_btn {
-  background-color: #0d6efd; 
+  background-color: #0d6efd;
+  border: none;
+}
+
+@media (max-width: 768px) {
+  .transparent-bg {
+    margin-top: 20%;
+    padding: 15px;
+    width: 95%;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  #cityInput {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .color_btn {
+    width: 100%;  
+  }
+}
+
+@media (max-width: 480px) {
+  .transparent-bg {
+    margin-top: 30%;
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 1.2rem;
+  }
 }
